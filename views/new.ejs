@@ -13,12 +13,12 @@
     <h1>Customize Product</h1>
     <form action="/hyperBean/yourOrder" method="POST">
         <!--  NOTE: the form is pre-populated with values for the server-->
-        Name: <input type="text" name="name"/><br />
-        Type of Bean: <input type="text" name="coffee"/><br />
-        Type of Cream: <input type="text" name="cream" /><br />
-        Size: <input type="text" name="size" /><br />
-        Number of Espresso Shots: <input type="number" name="espresso"/><br />
-        Quantity: <input type="number" name="qty"/><br />
+        Name: <input type="text" name="name" placeholder = "<%=defaultProduct.name%>"/><br />
+        Type of Bean: <input type="text" name="coffee" placeholder = "<%=defaultProduct.coffee%>"/><br />
+        Type of Cream: <input type="text" name="cream" placeholder ="<%=defaultProduct.cream%>" /><br />
+        Size: <input type="text" name="size" placeholder = "<%=defaultProduct.size%>"/><br />
+        Number of Espresso Shots: <input type="number" name="espresso" placeholder = "<%=defaultProduct.espresso%>"/><br />
+        Quantity: <input type="number" name="qty" placeholder = "<%=defaultProduct.qty%>" /><br />
         <input type="submit" value="Add to your Order" />
     </form>
 </body>

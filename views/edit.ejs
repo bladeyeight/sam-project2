@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <h1>Edit Order</h1>
+    <form action="/hyperBean/yourOrder/<%=product._id%>?_method=PUT" method="POST">
+        <!--  NOTE: the form is pre-populated with values for the server-->
+        Name: <input type="text" name="name" value="<%=product.name%>" /><br />
+        Type of Bean: <input type="text" name="coffee" value="<%=product.coffee%>" /><br />
+        Cream: <input type="text" name="cream" value="<%=product.cream%>" /><br />
+        Size: <input type="text" name="size" value="<%=product.size%>" /><br />
+        Espresso Shots: <input type = "number" name = "espresso" value ="<%=product.espresso%>" /><br />
+        Quantity: <input type="number" name="qty" value="<%=product.qty%>" /><br />
+        <input type="submit" value="Submit Changes" />
+    </form>
+</body>
+
+</html>

@@ -4,6 +4,13 @@ const Products = require('../models/products.js')
 const defaultProducts = require('../models/default.js')
 var customer = [
 ];
+const blackPrice = 3;
+const mochaPrice = 6;
+const frapPrice =  6;
+const ameriPrice = 5;
+const hotPrice = 4;
+var totalPrice = 0;
+var productPrice = null;
 
 
 // Index
@@ -25,12 +32,20 @@ productRouter.get('/' , (req, res) => {
 		res.render('order.ejs', {
 			product: allProducts,
             customer,
+            allProducts,
+            blackPrice,
+            mochaPrice,
+            frapPrice,
+            ameriPrice,
+            hotPrice,
+            totalPrice,
+            productPrice,
 		});
 	});
 });
 
 // New
-productRouter.get('/new', (req, res) => {
+productRouter.get('/:id/new', (req, res) => {
 	res.render('new.ejs', {
         defaultProduct: defaultProducts[req.params.id],
     product: Products,
@@ -43,6 +58,16 @@ productRouter.delete('/yourOrder/:id', (req, res) => {
     });
 });
 // Update
+
+productRouter.put('/yourOrder/:id', (req, res) => {
+	Products.findByIdAndUpdate(req.params.id, req.body, {
+		new: true
+	}, (error, updatedProduct) => {
+		res.redirect(`/hyperBean/yourOrder`);
+	});
+});
+
+
 productRouter.post('/menu', (req,res) => {
     // console.log(req.body);
     // console.log(customer);
@@ -61,14 +86,14 @@ productRouter.post("/yourOrder", (req,res)=>{
     });
 });
 // Edit
-// productRouter.get('/:id/edit', (req, res) => {     
-// 	Products.findById(req.params.id, (error, foundProduct) => {
-// 		res.render('edit.ejs', {
-//             defaultProduct: defaultProducts[req.params.id],
-// 			product: foundProduct
-// 		});
-// 	});
-// });
+productRouter.get('/:id/edit', (req, res) => {     
+	Products.findById(req.params.id, (error, foundProduct) => {
+		res.render('edit.ejs', {
+            defaultProduct: defaultProducts[req.params.id],
+			product: foundProduct
+		});
+	});
+});
 
 // Show
 productRouter.get('/:id', (req, res) => {

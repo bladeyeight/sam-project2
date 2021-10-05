@@ -17,6 +17,18 @@
     <h2>Number of Espresso Shots:<%=defaultProduct.espresso%></h2>
     <h2>Number of Items: <%=defaultProduct.qty%></h2>
     <h2>Price($):<%=defaultProduct.price%></h2>
-    <a href= "/hyperBean/new">Customize!</a>
+    <%if (defaultProduct.name == "Black") {%>
+    <a href= "/hyperBean/0/new">Customize!</a>
+    <%} else if (defaultProduct.name == "Mocha Latte") {%>
+        <a href= "/hyperBean/1/new">Customize!</a>
+    <%} else if (defaultProduct.name == "Frappuccino") {%>
+        <a href= "/hyperBean/2/new">Customize!</a>
+    <%} else if (defaultProduct.name == "Americano") {%>
+        <a href= "/hyperBean/3/new">Customize!</a>
+    <%} else if (defaultProduct.name == "Hot Chocolate") {%>
+        <a href= "/hyperBean/4/new">Customize!</a>
+    <%} else {%>
+        <a href= "/hyperBean/2/new">IDK WTF</a>
+    <%}%>
 </body>
 </html>
