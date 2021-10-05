@@ -1,4 +1,5 @@
 require('dotenv').config()
+const productRouter = require('./controllers/goods.js');
 
 //___________________
 //Dependencies
@@ -44,15 +45,14 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
+const productController = require('./controllers/goods');
+app.use('/hyperBean', productController);
 
 
 //___________________
 // Routes
 //___________________
 //localhost:3000
-app.get('/' , (req, res) => {
-  res.send('Hello World!');
-});
 
 //___________________
 //Listener
