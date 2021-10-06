@@ -5,16 +5,32 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Welcome Page</title>
-        <link rel="stylesheet" href="/css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/welcome.css">
+        <script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- <script>
+            function fadeIn(elementToFade);
+        {
+            var element = document.getElementById(elementToFade);
+
+            element.style.opacity = parseFloat(element.style.opacity) + 0.1;
+            
+        }
+        </script> -->
+        
 	</head>
 	<body>
-        <h1>Welcome to HyperBean!</h1>
+        <h1><span id="hyper">Welcome</span> to <span id="welcome">Hyper</span>Bean!</h1>
         <form action="/hyperBean/menu" method="POST">
-            Please give us a name for your order: <input type="text" name="customer" />
-            <input type="submit" 
-            value = "Get Started!" />
-        
+            Please give us a name for your order: <input id="art" type="text" name="customer" />
+            <input class = "jitterBug" type="submit" 
+            value = "Get Started!" onclick="document.getElementById('simpleArc').innerHTML = `${document.getElementById('art').value}`;
+            " />
         </form>
+        <div id="simpleArc"></div>
+    
 		
 	</body>
 </html>

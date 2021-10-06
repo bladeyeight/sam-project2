@@ -13,6 +13,7 @@ var totalPrice = 0;
 var productPrice = null;
 
 
+
 // Index
 
 productRouter.get('/' , (req, res) => {
@@ -22,12 +23,15 @@ productRouter.get('/' , (req, res) => {
   });
 
   productRouter.get('/menu' , (req, res) => {
+
+    setTimeout((() => {  
     res.render('index.ejs', {
         customer: customer,
-    });
+    })}), 3000);
   });
 
   productRouter.get('/yourOrder', (req, res) => {
+      customerRestore();
 	Products.find({}, (error, allProducts) => {
 		res.render('order.ejs', {
 			product: allProducts,

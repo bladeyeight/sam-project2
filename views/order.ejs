@@ -25,23 +25,23 @@
             </form></li>
                 <%if (product.name == "Black") {%>
                  <li>
-                     Price: <%=productPrice=blackPrice * product.qty%>
+                     Price:$ <%=productPrice=blackPrice * product.qty%>
                  </li>
                     <%} else if (product.name == "Mocha Latte") {%>
                         <li>
-                        Price: <%=productPrice=mochaPrice * product.qty%>
+                        Price:$<%=productPrice=mochaPrice * product.qty%>
                         </li>
                     <%} else if (product.name == "Frappuccino") {%>
                         <li>
-                            Price: <%=productPrice=frapPrice * product.qty%>
+                            Price:$ <%=productPrice=frapPrice * product.qty%>
                         </li>
                     <%} else if (product.name == "Americano") {%>
                         <li>
-                            Price: <%=productPrice= ameriPrice * product.qty%>
+                            Price:$ <%=productPrice= ameriPrice * product.qty%>
                         </li>
                     <%} else if (product.name == "Hot Chocolate") {%>
                         <li>
-                            Price: <%=productPrice=hotPrice * product.qty%>
+                            Price:$ <%=productPrice=hotPrice * product.qty%>
                         </li>
                     <%} else {%>
                         <li>
