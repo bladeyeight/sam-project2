@@ -1,23 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Stock List</title>
-        <link rel="stylesheet" href="/css/index.css">
-	</head>
-	<body>
-		<h1>Hello <%=customer%>! What would you like to order today?</h1>
-		<ul>
-		    <li>Black<a href="/hyperBean/0">Add to Order</a>
-            </a></li>
-            <li>Mocha Latte<a href="/hyperBean/1">Add to Order</a></li>
-            <li>Frappuccino<a href="/hyperBean/2">Add to Order</a></li>
-            <li>Americano<a href="/hyperBean/3">Add to Order</a></li>
-            <li>Hot Chocolate<a href="/hyperBean/4">Add to Order</a></li>
-        </ul>
-        
-        
-	</body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <h1>Hello <span class ="jitterbug1"><%=customer%></span>! What would you like <span class = "yellow">to order</span> today?</h1>
+
+    <div id="container1">
+        <a href="/hyperBean/0">
+            <img class= "images" src="https://images.unsplash.com/photo-1521302080334-4bebac2763a6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlfGVufDB8MnwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+                alt="Snow" style="width:100%;">
+            <div class="centered">Black</div>
+        </a>
+    </div>
+    <div id="container2" class = "jitterbug">
+        <a href="/hyperBean/1">
+            <img class= "images" src="https://images.unsplash.com/photo-1519333796630-4b7d19ad1bb3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmVlfGVufDB8MnwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+                alt="Snow" style="width:100%;">
+            <div class="centered">Mocha Latte</div>
+        </a>
+    </div>
+    <div id="container3">
+        <a href="/hyperBean/2">
+            <img class= "images" src="https://media.istockphoto.com/photos/mocha-typing-picture-id170128413?b=1&k=20&m=170128413&s=170667a&w=0&h=P6s_Bu9hhcfa8N0FoccQ4Aq3uo7Qij8l9waFZ8_iVog="
+                alt="Snow" style="width:100%;">
+            <div class="centered">Frappuccino</div>
+        </a>
+    </div>
+    <div id="container4">
+        <a href="/hyperBean/3">
+            <img class= "images" src="https://media.istockphoto.com/photos/cappuccino-coffee-top-view-picture-id1310561627?b=1&k=20&m=1310561627&s=170667a&w=0&h=vbDkPi-C_fju34OGVOQ9saEa7hQwUVExJp7G3eL0H9Y="
+                alt="Snow" style="width:100%;">
+            <div class="centered">Americano</div>
+        </a>
+    </div>
+    <div id="container5">
+        <a href="/hyperBean/4">
+            <img class= "images" src="https://images.unsplash.com/photo-1590080876209-c70d0f0bf6a3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG90JTIwY2hvY29sYXRlfGVufDB8MnwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+                alt="Snow" style="width:100%;">
+            <div class="centered">Hot Chocolate</div>
+        </a>
+    </div>
+
+
+</body>
+
 </html>

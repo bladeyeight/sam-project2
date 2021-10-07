@@ -3,6 +3,10 @@ body {
     
     text-align: center;
     background-image: url(https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvZmZlZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
     
 }
 
@@ -16,7 +20,7 @@ h1 {
 
 form {
     position: relative;
-    bottom: 40px;
+    top: 160px;
     font-family: "Oswald";
     font-size: 20px;
     color: aliceblue;
@@ -24,7 +28,7 @@ form {
 
 #simpleArc {
     position: relative;
-    font-size: 29px;
+    font-size: 70px;
     color: floralwhite;
     font-family: "Rock Salt";
     top: 17px;

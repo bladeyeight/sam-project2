@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product List</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/edit.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rock+Salt&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Customize Product</h1>
+    <h1><span class ="red">Customize</span> Product</h1>
+    
     <form action="/hyperBean/yourOrder" method="POST">
         <!--  NOTE: the form is pre-populated with values for the server-->
         Name: <input type="text" name="name" placeholder = "<%=defaultProduct.name%>"/><br />
         Type of Bean: <input type="text" name="coffee" placeholder = "<%=defaultProduct.coffee%>"/><br />
-        Type of Cream: <input type="text" name="cream" placeholder ="<%=defaultProduct.cream%>" /><br />
+        <span class = "red">Type</span> of Cream: <input type="text" name="cream" placeholder ="<%=defaultProduct.cream%>" /><br />
         Size: <input type="text" name="size" placeholder = "<%=defaultProduct.size%>"/><br />
-        Number of Espresso Shots: <input type="number" name="espresso" placeholder = "<%=defaultProduct.espresso%>"/><br />
-        Quantity: <input type="number" name="qty" placeholder = "<%=defaultProduct.qty%>" /><br />
-        <input type="submit" value="Add to your Order" />
+        Number of <span class = "yellow">Espresso</span> Shots: <input type="number" name="espresso" placeholder = "<%=defaultProduct.espresso%>"/><br />
+        <span class = "yellow">Quantity:</span> <input type="number" name="qty" placeholder = "<%=defaultProduct.qty%>" /><br />
+        <input id = "button" type="submit" value="Add to your Order" />
     </form>
+    
 </body>
 
 </html>

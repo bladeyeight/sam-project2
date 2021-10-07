@@ -5,23 +5,29 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Stock List</title>
-        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/order.css">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rock+Salt&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet">
+
 	</head>
 	<body>
-        <a href="/hyperBean/menu">Back to Menu</a>
-		<h1><%=customer%>'s order</h1>
+        <a id = "a1" href="/hyperBean/menu">Back to Menu</a>
+        
+		<h1><span class = "red" id ="jitterbug1"><%=customer%>'s</span> order</h1>
+        <input id = "submitOrder" type ="submit" value ="Submit Order" onclick = "alert('Your Order has been Submitted!')"/>
+        
 		<ul>
 			<% product.forEach(product => { %>
             
-			<li><%=product.name; %></li>
-            <li>Bean:<%=product.coffee%></li>
+			<li><span class ="yellow"><%=product.name; %></span></li>
+            <li><span class = "red">Bean:</span><%=product.coffee%></li>
             <li>Cream:<%=product.cream%></li>
-            <li>Size: <%=product.size%></li>
-            <li>Espresso Shots:<%=product.espresso%></li>
+            <li><span class = "yellow" id = "jitterbug3">Size:</span> <%=product.size%></li>
+            <li>Espresso <span class = "yellow">Shots:</span><%=product.espresso%></li>
             <li>Quantity: <%=product.qty%></li>
-            <li><a href="/hyperBean/<%=product._id%>/edit">Edit</a></li>
-            <li><form action="/hyperBean/yourOrder/<%=product.id %>?_method=DELETE" method="POST">
-                <input type="submit" value="DELETE"/>
+            <li><a class = "edit" href="/hyperBean/<%=product._id%>/edit">Edit</a></li>
+            <li><form class = "delete" action="/hyperBean/yourOrder/<%=product.id %>?_method=DELETE" method="POST">
+                <input class = "button" type="submit" value="DELETE"/>
             </form></li>
                 <%if (product.name == "Black") {%>
                  <li>
@@ -54,7 +60,9 @@
             <% totalPrice = totalPrice + productPrice%>
 			<% }) %>
         </ul>
-        <h2>Your total is: $<%=totalPrice%></h2>
+
+        <h2><span class = "yellow" id = "jitterbug2">Your total is:</span> $<%=totalPrice%></h2>
+        
         
         
 	</body>

@@ -1,89 +1,35 @@
 body {
-    background-color: black;
+    background-image: url(https://media.istockphoto.com/photos/falling-roasted-coffee-beans-on-brown-background-picture-id1328567022?b=1&k=20&m=1328567022&s=170667a&w=0&h=Ih9PSrM0oZmeD9y3EnUbn0ygD9Tk9oAuZaUIr5pydvc=);
+    font-family: "Indie Flower";
     color: white;
-    background-image: url(https://media.istockphoto.com/photos/dark-ominous-rain-clouds-and-lightning-picture-id111969828?b=1&k=20&m=111969828&s=170667a&w=0&h=82jc3YNbMrkdub1Dlf64NacPRp_wFOaT6xfB6e7HJmM=);
-    text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-h1 {
-    font-family: "akronim";
-    font-size: 70px;
-}
-
-#container1 {
-    position:relative;
-    display: block;
-    width: 10em;
-    height: 15em;
     text-align: center;
-    top: 40px;
-    left: 500px;
 }
 
-#container2 {
-    position:relative;
-    left: 740px;
-    bottom: 200px;
-    display: block;
-    width: 10em;
-    height: 15em;
-    animation: shake2 .7s;
-    animation-iteration-count: infinite;
+form {
+    position: relative;
+    top: 80px;
 }
 
-#container3 {
-    position:relative;
-    display: block;
-    width: 10em;
-    height: 15em;
-    bottom: 230px;
-    left: 530px;
-}
-
-#container4 {
-    position:relative;
-    display: block;
-    width: 10em;
-    height: 15em;
-    bottom: 626px;
-    left: 1000px;
-}
-
-#container5 {
-    position:relative;
-    display: block;
-    width: 10em;
-    height: 15em;
-    bottom: 800px;
-    left: 190px;
-    animation: shake .7s;
-    animation-iteration-count: infinite;
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: "Rock Salt";
-    color: blue;
-}
-
-.yellow {
-    color: orange;
-}
-
-.jitterBug {
-    background-color: brown;
+#button {
+    background-color: crimson;
     font-size: 16px;
     border: none;
     animation: shake1 .7s;
     animation-iteration-count: infinite;
 }
 
-.jitterbug1{
+.yellow {
+    color: orange;
+    animation: shake2 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  display: inline-block;
+}
+
+.red {
     color: crimson;
     animation: shake3 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;
   transform: translate3d(0, 0, 0);
@@ -93,20 +39,6 @@ h1 {
 }
 
 @keyframes shake1 {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-@keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
     20% { transform: translate(-3px, 0px) rotate(1deg); }
@@ -134,10 +66,6 @@ h1 {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-.images {
-    border: 5px solid crimson;
-}
-
 @keyframes shake3 {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -150,4 +78,8 @@ h1 {
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+h1{
+    font-size: 70px;
 }

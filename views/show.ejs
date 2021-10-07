@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="/css/show.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet">
     <title>Show Page</title>
 </head>
 <body>
     <div class = "container"></div>
-    <h1>Here are the default customization options for <%=defaultProduct.name%></h1>
+    <h1><span class ="red">Here</span> are the <span id = "jitterbug2">default</span> <span class ="yellow">customization</span> options for <%=defaultProduct.name%></h1>
     <a href= "/hyperBean/menu">Back</a>
-    <h2>Type of Bean Used:<%=defaultProduct.coffee%></h2>
-    <h2>Type of Cream: <%=defaultProduct.cream%></h2>
+    <h2>Type of <span class ="red" id ="jitterbug1">Bean</span> Used:<%=defaultProduct.coffee%></h2>
+    <h2><span class ="yellow">Type of Cream:</span> <%=defaultProduct.cream%></h2>
     <h2>Size:<%=defaultProduct.size%></h2>
     <h2>Number of Espresso Shots:<%=defaultProduct.espresso%></h2>
-    <h2>Number of Items: <%=defaultProduct.qty%></h2>
+    <h2>Number of Items: <span id = "jitterbug3" class ="red"><%=defaultProduct.qty%></span></h2>
     <h2>Price($):<%=defaultProduct.price%></h2>
     <%if (defaultProduct.name == "Black") {%>
     <a href= "/hyperBean/0/new">Customize!</a>
