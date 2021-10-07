@@ -16,7 +16,10 @@ var productPrice = null;
 
 // Index
 
+
+
 productRouter.get('/' , (req, res) => {
+    customer = [];
     res.render('welcome.ejs', {
         customer,
     });
