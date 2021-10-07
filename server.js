@@ -50,7 +50,10 @@ app.use('/hyperBean', productController);
 
 
 //___________________
-// Routes
+// Routes for Heroku
+app.get('/', (req, res) => {
+  res.render('welcome.ejs')
+});
 //___________________
 //localhost:3000
 
