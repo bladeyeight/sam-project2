@@ -13,7 +13,7 @@ var totalPrice = 0;
 var productPrice = null;
 
 function customerRestore(){
-    customer.length == 1
+    customer.length === 1;
 };
 
 
