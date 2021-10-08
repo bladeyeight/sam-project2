@@ -52,6 +52,7 @@ app.use('/hyperBean', productController);
 //___________________
 // Routes for Heroku
 app.get('/', (req, res) => {
+  customer = [];
   res.render('welcome.ejs')
 });
 //___________________
