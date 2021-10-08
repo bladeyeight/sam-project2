@@ -12,6 +12,10 @@ const hotPrice = 4;
 var totalPrice = 0;
 var productPrice = null;
 
+function customerRestore(){
+    customer.length == 1
+};
+
 
 
 // Index
@@ -26,7 +30,7 @@ productRouter.get('/' , (req, res) => {
   });
 
   productRouter.get('/menu' , (req, res) => {
-
+    customerRestore();
     setTimeout((() => {  
     res.render('index.ejs', {
         customer: customer,
@@ -34,6 +38,7 @@ productRouter.get('/' , (req, res) => {
   });
 
   productRouter.get('/yourOrder', (req, res) => {
+      customerRestore();
 	Products.find({}, (error, allProducts) => {
 		res.render('order.ejs', {
 			product: allProducts,
